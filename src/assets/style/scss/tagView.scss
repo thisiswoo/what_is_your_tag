@@ -1,0 +1,11 @@
+@import './_variables.scss';
+
+.tag-div {
+    position: $tag-div-position;
+    background-color: $tag-div-bgcolor;
+    height: $tag-div-height;
+    background-size: $tag-div-bgsize;
+    background-repeat: $tag-div-bgrepeat;
+    background-position: $tag-div-bgposition;
+    font-family: $tag-div-fontfamily;
+  }

@@ -1,0 +1,94 @@
+/* tag-div */
+$tag-div-position: relative;
+$tag-div-bgcolor: #000;
+$tag-div-height: 100vh;
+$tag-div-bgsize: cover;
+$tag-div-bgrepeat: no-repeat;
+$tag-div-bgposition: center;
+$tag-div-fontfamily: "Libre Baskerville", serif;
+
+/* section container */
+$section-div-position: absolute;
+$section-div-top: 50%;
+$section-div-left: 50%;
+$section-div-padding: 30px 0;
+$section-div-width: 800px;
+$section-div-text-align: center;
+$section-div-border-radius: 15px;
+$section-div-webkit-border-radius: 15px;
+$section-div-moz-border-radius: 15px;
+$section-div-ms-border-radius: 15px;
+$section-div-o-border-radius: 15px;
+$section-div-transform: translate(-50%, -50%);
+$section-div-webkit-transform: translate(-50%, -50%);
+$section-div-moz-transform: translate(-50%, -50%);
+$section-div-ms-transform: translate(-50%, -50%);
+$section-div-o-transform: translate(-50%, -50%);
+
+/* input .addTag */
+$add-tag-position: relative;
+$add-tag-border: none;
+$add-tag-width: 800px;
+$add-tag-height: 120px;
+$add-tag-text-align: center;
+$add-tag-font-size: 72px;
+$add-tag-font-style: italic;
+$add-tag-padding: 0 30px;
+$add-tag-font-weight: 700;
+$add-tag-background: transparent;
+$add-tag-color: #fff;
+$add-tag-text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+$add-tag-font-family: 'Kalam', cursive;
+
+/* .container */
+$container-position: absolute;
+$container-top: 50%;
+$container-left: 50%;
+$container-padding: 30px 0;
+$container-width: 800px;
+$container-text-align: center;
+$container-border-radius: 15px;
+$container--webkit-border-radius: 15px;
+$container--moz-border-radius: 15px;
+$container--ms-border-radius: 15px;
+$container--o-border-radius: 15px;
+$container-transform: translate(-50%, -50%);
+$container--webkit-transform: translate(-50%, -50%);
+$container--moz-transform: translate(-50%, -50%);
+$container--ms-transform: translate(-50%, -50%);
+$container--o-transform: translate(-50%, -50%);
+
+/* a */
+$a-text-decoration: none;
+$a-color: #fff;
+
+/* .container__tag */
+$container-tag-margin-top: 30px;
+
+/* tag-components */
+$tag-components-color: #000;
+$tag-components-display: inline-block;
+$tag-components-cursor: pointer;
+$tag-components-font-size: 24px;
+$tag-components-font-weight: 500;
+$tag-components-background-color: rgba(255,255,255,0.7);
+$tag-components-margin: 8px 4px;
+$tag-components-padding: 5px 25px;
+$tag-components-border-radius: 5px;
+$tag-components--webkit-border-radius: 5px;
+$tag-components--moz-border-radius: 5px;
+$tag-components--ms-border-radius: 5px;
+$tag-components--o-border-radius: 5px;
+$tag-components-transition: transform 0.3s ease;
+$tag-components--webkit-transition: transform 0.3s ease;
+$tag-components--moz-transition: transform 0.3s ease;
+$tag-components--ms-transition: transform 0.3s ease;
+$tag-components--o-transition: transform 0.3s ease;
+
+/* tag-component:-hover */
+$tag-components-hover-transform: translateY(-5px);
+$tag-components-hover--webkit-transform: translateY(-5px);
+$tag-components-hover--moz-transform: translateY(-5px);
+$tag-components-hover--ms-transform: translateY(-5px);
+$tag-components-hover--o-transform: translateY(-5px);
+$tag-components-hover-background-color: rgba(255, 221, 28, 0.7);

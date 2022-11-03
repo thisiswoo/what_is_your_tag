@@ -1,0 +1,40 @@
+@import './_variables.scss';
+
+a {
+    text-decoration: $a-text-decoration;
+    color: $a-color;
+}
+
+.container__tag {
+    margin-top: $container-tag-margin-top;
+}
+
+.tag {
+    color: $tag-components-color;
+    display: $tag-components-display;
+    cursor: $tag-components-cursor;
+    font-size: $tag-components-font-size;
+    font-weight: $tag-components-font-weight;
+    background-color: $tag-components-background-color;
+    margin: $tag-components-margin;
+    padding: $tag-components-padding;
+    border-radius: $tag-components-border-radius;
+    -webkit-border-radius: $tag-components--webkit-border-radius;
+    -moz-border-radius: $tag-components--moz-border-radius;
+    -ms-border-radius: $tag-components--ms-border-radius;
+    -o-border-radius: $tag-components--o-border-radius;
+    transition: $tag-components-transition;
+    -webkit-transition: $tag-components--webkit-transition;
+    -moz-transition: $tag-components--moz-transition;
+    -ms-transition: $tag-components--ms-transition;
+    -o-transition: $tag-components--o-transition;
+  }
+  
+  .tag:hover {
+    transform: $tag-components-hover-transform;
+    -webkit-transform: $tag-components-hover--webkit-transform;
+    -moz-transform: $tag-components-hover--moz-transform;
+    -ms-transform: $tag-components-hover--ms-transform;
+    -o-transform: $tag-components-hover--o-transform;
+    background-color: $tag-components-hover-background-color;
+  }

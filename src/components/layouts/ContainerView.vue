@@ -3,15 +3,38 @@
     <input
       type="text"
       class="addTag"
-      value=""
       placeholder="what is your tag?"
       spellcheck="false"
+      v-model="inputTag"
+      @keyup.enter="enterTag"
     />
   </section>
 </template>
 
 <script>
-export default {};
+import { ref } from 'vue';
+
+export default {
+  emits: ['add-input-tag'],
+  setup(props, { emit }) {
+    const inputTag = ref('');
+
+    const enterTag = () => {
+      console.log('emit ------> : ', inputTag.value);
+      if (inputTag.value !== '') {
+        emit('add-input-tag', {
+          tagName: inputTag.value,
+        });
+        inputTag.value = '';
+      }
+    };
+
+    return {
+      inputTag,
+      enterTag,
+    }
+  }
+};
 </script>
 
 <style>

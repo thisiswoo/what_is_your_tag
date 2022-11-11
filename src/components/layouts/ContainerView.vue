@@ -1,6 +1,5 @@
 <template>
-  <section class="container">
-    <input
+  <input
       type="text"
       class="addTag"
       placeholder="what is your tag?"
@@ -8,7 +7,6 @@
       v-model="inputTag"
       @keyup.enter="enterTag"
     />
-  </section>
 </template>
 
 <script>
@@ -37,6 +35,6 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 @import "../../assets/style/scss/containerView.scss";
 </style>

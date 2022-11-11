@@ -1,8 +1,9 @@
 <template>
-  <div class="tag tag-div">
-    <h1>This is an Tag page</h1>
-    <ContainerView @add-input-tag="addInputTag" />
-    <ContainerTagView :tags="tags" />
+  <div class="tag-div">
+    <section class="container">
+      <ContainerView @add-input-tag="addInputTag" />
+      <ContainerTagView :tags="tags" />
+    </section>
   </div>
 </template>
 
@@ -34,4 +35,10 @@ export default {
 
 <style lang="scss">
 @import "../../assets/style/scss/tagView.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 </style>

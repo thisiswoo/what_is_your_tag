@@ -28,22 +28,3 @@ input.addTag::-webkit-input-placeholder {
 .addTag:focus {
   outline: none;
 }
-
-.container {
-  position: $container-position;
-  top: $container-top;
-  left: $container-left;
-  padding: $container-padding;
-  width: $container-width;
-  text-align: $container-text-align;
-  border-radius: $container-border-radius;
-  -webkit-border-radius: $container--webkit-border-radius;
-  -moz-border-radius: $container--moz-border-radius;
-  -ms-border-radius: $container--ms-border-radius;
-  -o-border-radius: $container--o-border-radius;
-  transform: $container-transform;
-  -webkit-transform: $container--webkit-transform;
-  -moz-transform: $container--moz-transform;
-  -ms-transform: $container--ms-transform;
-  -o-transform: $container--o-transform;
-}

@@ -1,9 +1,10 @@
 <template>
   <section class="container__tag">
-    <div 
+    <article 
+      class="tag"
       v-for="t in tags"
       :key="t.tagName"
-    >#{{ t.tagName }}</div>
+    >#{{ t.tagName }}</article>
   </section>
 </template>
 
@@ -18,6 +19,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 @import "../../assets/style/scss/containerTagView.scss";
 </style>

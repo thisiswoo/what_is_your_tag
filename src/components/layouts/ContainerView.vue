@@ -14,7 +14,8 @@ import { ref } from 'vue';
 
 export default {
   emits: ['add-input-tag'],
-  setup(props, { emit }) {
+
+  setup(props, {emit}) {
     const inputTag = ref('');
 
     const enterTag = () => {
@@ -26,7 +27,7 @@ export default {
         inputTag.value = '';
       }
     };
-
+    
     return {
       inputTag,
       enterTag,

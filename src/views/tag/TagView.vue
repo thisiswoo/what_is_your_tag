@@ -24,7 +24,7 @@ export default {
   },
   setup() {
     const tags = ref([]);
-    let responseURL = ref('');
+    const responseURL = ref('');
 
     const addInputTag = async (inputTag) => {
       console.log('parents inputTag : ', inputTag.tagName.toLowerCase());

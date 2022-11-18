@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import { onMounted } from '@vue/runtime-core';
 export default {
   props: {
     tags: {
@@ -21,6 +22,16 @@ export default {
     }
   },
   setup(props, {emit}) {
+    // let tagList = [];
+
+    onMounted(() => {
+      // tagList = [...props.tags]; // deep copy (spread) 새로운 객체로 덮어씌우기
+      // JSON.parse(JSON.stringify(props.tags));  // deep copy, JSON.stringify()로 문자열로 만든 다음 JSON.parse()로 parsing 하여 새로운 객채로 만든다.
+      
+      // tagList = 
+    });
+
+
     // tag 클릭 후 부모 Component에 데이터 보내기.
     const clickTag = (e) => {
       // 태그 이름 꺼내어 부모 Component에 태그 이름만 보내주기.

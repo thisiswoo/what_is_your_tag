@@ -63,12 +63,6 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scope>
 @import "../../assets/style/scss/tagView.scss";
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 </style>

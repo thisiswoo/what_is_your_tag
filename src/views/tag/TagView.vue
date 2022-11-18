@@ -8,7 +8,7 @@
         @add-input-tag="addInputTag" 
       />
       <ContainerTagView 
-        :tags="tags" 
+        :tags="tags"
         @click-tag="clickTag"
       />
     </section>
@@ -30,19 +30,14 @@ export default {
   setup() {
     const tags = ref([]);
     const responseURL = ref('');
-    // const tagBackground = ref('');
 
     // input에 입력시 추가되는 태그.
     const addInputTag = async (result) => {
-      // console.log('parents result tagName : ', result.tagName.toLowerCase());
-      // console.log('parents result tagColors : ', result.tagColors);
       tags.value.push(result);
-      // console.log('child result tagColors : ', tags.value);
 
       try {
         const res = await axios.get(`https://source.unsplash.com/featured/?${result.tagName.toLowerCase()}`);
         responseURL.value = "background-image:url(" + res.request.responseURL + ")";
-        // tagBackground.value = `background-color: rgba(${result.tagColors[0]}, ${result.tagColors[1]}, ${result.tagColors[2]}, 0.7);`
       } catch(error) {
         console.log('addInputTag async error : ', error);
       }
@@ -63,7 +58,6 @@ export default {
       addInputTag,
       responseURL,
       clickTag,
-      // tagBackground,
     }
   }
 };

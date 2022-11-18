@@ -27,6 +27,7 @@ export default {
           tagColors: getRandomRGB(180, 230)
         });
         inputTag.value = '';
+        tagColors.value = [];
       }
     };
 

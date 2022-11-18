@@ -2,8 +2,9 @@
   <section class="container__tag">
     <article 
       class="tag"
-      v-for="t in tags"
-      :key="t.tagName"
+      v-for="(t, index) in tags"
+      :key="index"
+      @click="clickTag"
     >#{{ t.tagName }}</article>
   </section>
 </template>
@@ -14,6 +15,22 @@ export default {
     tags: {
       type: Array,
       required: true,
+    }
+  },
+  setup(props, {emit}) {
+    const clickTag = (e) => {
+      let selectedTagName = e.target.textContent;
+      let resultTagName = selectedTagName.replace('#', '');
+      console.log('selectedTagName : ', selectedTagName);
+      console.log('resultTagName : ', resultTagName);
+      console.log('click tag : ', e.target.textContent);
+      emit('click-tag', {
+          clickTagName: resultTagName,
+        });
+    };
+
+    return {
+      clickTag,
     }
   }
 }

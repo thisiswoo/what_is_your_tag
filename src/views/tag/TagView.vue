@@ -5,7 +5,7 @@
   >
     <section class="container">
       <ContainerView @add-input-tag="addInputTag" />
-      <ContainerTagView :tags="tags" />
+      <ContainerTagView :tags="tags" @click-tag="clickTag"/>
     </section>
   </div>
 </template>
@@ -37,7 +37,18 @@ export default {
         console.log("responseURL value >>", responseURL.value);
         console.log('async res : ', res.request.responseURL);
       } catch(error) {
-        console.log('async error : ', error);
+        console.log('addInputTag async error : ', error);
+      }
+    };
+
+    const clickTag = async (result) => {
+      console.log('result : ', result);
+      console.log('result : ', result.clickTagName);
+      try {
+        const res = await axios.get(`https://source.unsplash.com/featured/?${result.clickTagName.toLowerCase()}`);
+        responseURL.value = "background-image:url(" + res.request.responseURL + ")";
+      } catch(error) {
+        console.log('clickTag async error : ', error);
       }
     };
 
@@ -45,6 +56,7 @@ export default {
       tags,
       addInputTag,
       responseURL,
+      clickTag,
     }
   }
 };

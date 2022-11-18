@@ -10,6 +10,8 @@
 </template>
 
 <script>
+// import { watch } from 'vue';
+
 export default {
   props: {
     tags: {
@@ -18,16 +20,30 @@ export default {
     }
   },
   setup(props, {emit}) {
+    // const tagBackground = ref('');
+
+    console.log('props tags : ', props.tags);
+    // let test = ref(props.tags);
+
     const clickTag = (e) => {
+      // 태그 이름 꺼내어 부모 Component에 태그 이름만 보내주기.
       let selectedTagName = e.target.textContent;
       let resultTagName = selectedTagName.replace('#', '');
-      console.log('selectedTagName : ', selectedTagName);
-      console.log('resultTagName : ', resultTagName);
-      console.log('click tag : ', e.target.textContent);
       emit('click-tag', {
-          clickTagName: resultTagName,
+        clickTagName: resultTagName,
         });
     };
+
+    // watch((tagBackground), (current, prev) => {
+      //   console.log('watch : ', current, prev);
+    //   tagBackground.value = `background-color: rgba(${result.tagColors[0]}, ${result.tagColors[1]}, ${result.tagColors[2]}, 0.7);`
+    // });
+    
+    // watch((props.tags), (current, prev) => {
+    //   console.log('watch : ', current, prev);
+    //   console.log('props tags : ', props.tags.tagColors);
+    //   // tagBackground.value = `background-color: rgba(${result.tagColors[0]}, ${result.tagColors[1]}, ${result.tagColors[2]}, 0.7);`
+    // });
 
     return {
       clickTag,

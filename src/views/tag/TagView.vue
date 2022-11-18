@@ -4,8 +4,13 @@
     :style="responseURL"
   >
     <section class="container">
-      <ContainerView @add-input-tag="addInputTag" />
-      <ContainerTagView :tags="tags" @click-tag="clickTag"/>
+      <ContainerView 
+        @add-input-tag="addInputTag" 
+      />
+      <ContainerTagView 
+        :tags="tags" 
+        @click-tag="clickTag"
+      />
     </section>
   </div>
 </template>
@@ -25,25 +30,26 @@ export default {
   setup() {
     const tags = ref([]);
     const responseURL = ref('');
+    // const tagBackground = ref('');
 
-    const addInputTag = async (inputTag) => {
-      console.log('parents inputTag : ', inputTag.tagName.toLowerCase());
-      tags.value.push(inputTag);
-      
+    // input에 입력시 추가되는 태그.
+    const addInputTag = async (result) => {
+      // console.log('parents result tagName : ', result.tagName.toLowerCase());
+      // console.log('parents result tagColors : ', result.tagColors);
+      tags.value.push(result);
+      // console.log('child result tagColors : ', tags.value);
+
       try {
-        const res = await axios.get(`https://source.unsplash.com/featured/?${inputTag.tagName.toLowerCase()}`);
+        const res = await axios.get(`https://source.unsplash.com/featured/?${result.tagName.toLowerCase()}`);
         responseURL.value = "background-image:url(" + res.request.responseURL + ")";
-        console.log("responseURL >>", responseURL);
-        console.log("responseURL value >>", responseURL.value);
-        console.log('async res : ', res.request.responseURL);
+        // tagBackground.value = `background-color: rgba(${result.tagColors[0]}, ${result.tagColors[1]}, ${result.tagColors[2]}, 0.7);`
       } catch(error) {
         console.log('addInputTag async error : ', error);
       }
     };
 
+    // 추가된 태그를 클릭하였을때 해당 태그의 이름으로 배경 바꾸기.
     const clickTag = async (result) => {
-      console.log('result : ', result);
-      console.log('result : ', result.clickTagName);
       try {
         const res = await axios.get(`https://source.unsplash.com/featured/?${result.clickTagName.toLowerCase()}`);
         responseURL.value = "background-image:url(" + res.request.responseURL + ")";
@@ -57,6 +63,7 @@ export default {
       addInputTag,
       responseURL,
       clickTag,
+      // tagBackground,
     }
   }
 };

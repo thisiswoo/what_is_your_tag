@@ -25,7 +25,7 @@ export default {
     // let tagList = [];
 
     onMounted(() => {
-      // tagList = [...props.tags]; // deep copy (spread) 새로운 객체로 덮어씌우기
+      // tagList = [...props.tags]; // deep copy (spread 문법) 새로운 객체로 덮어씌우기
       // JSON.parse(JSON.stringify(props.tags));  // deep copy, JSON.stringify()로 문자열로 만든 다음 JSON.parse()로 parsing 하여 새로운 객채로 만든다.
       
       // tagList = 
